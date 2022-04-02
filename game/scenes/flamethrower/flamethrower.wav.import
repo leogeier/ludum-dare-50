@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/flamethrower.wav-c96a476fd2f321df509a1410dcc2d831.sample"
+
+[deps]
+
+source_file="res://scenes/flamethrower/flamethrower.wav"
+dest_files=[ "res://.import/flamethrower.wav-c96a476fd2f321df509a1410dcc2d831.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/tool/tool.gd" type="Script" id=2]
+
+[node name="Tool" type="Node2D" groups=[
+"tool",
+]]
+script = ExtResource( 2 )

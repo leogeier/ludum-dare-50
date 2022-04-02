@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shears.wav-5189266995fb1f8eb64dda66079ff2de.sample"
+
+[deps]
+
+source_file="res://scenes/shears/shears.wav"
+dest_files=[ "res://.import/shears.wav-5189266995fb1f8eb64dda66079ff2de.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
