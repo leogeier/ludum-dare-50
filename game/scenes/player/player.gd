@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export(float, 0, 400) var max_velocity = 100.0
 export(float, 0, 100) var accelaration = 10.0
+export(float, 0, 1) var vignette_scale = 1
 
 var velocity = 0
 var last_dir = Vector2.RIGHT
@@ -19,6 +20,9 @@ func on_changed_tool(is_flamethrower):
 	$FuelPack.visible = is_flamethrower
 
 func _process(_delta):
+	$Vignette.rotation = -rotation
+	$Vignette.scale = Vector2(vignette_scale, vignette_scale)
+
 	if velocity > 0:
 		$AnimatedSprite.play("walk")
 	else:

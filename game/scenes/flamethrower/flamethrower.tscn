@@ -4,37 +4,37 @@
 [ext_resource path="res://scenes/flamethrower/flamethrower.wav" type="AudioStream" id=2]
 [ext_resource path="res://scenes/flamethrower/flamethrower.gd" type="Script" id=3]
 [ext_resource path="res://scenes/flamethrower/flame-particles.png" type="Texture" id=4]
-[ext_resource path="res://assets/light.png" type="Texture" id=5]
+[ext_resource path="res://assets/light2.png" type="Texture" id=5]
 
-[sub_resource type="CanvasItemMaterial" id=2]
+[sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 1
 particles_animation = true
 particles_anim_h_frames = 2
 particles_anim_v_frames = 3
 particles_anim_loop = false
 
-[sub_resource type="Gradient" id=3]
+[sub_resource type="Gradient" id=2]
 colors = PoolColorArray( 1, 0.982101, 0.460938, 1, 0.558594, 0.0458221, 0.0458221, 1 )
 
-[sub_resource type="GradientTexture" id=4]
-gradient = SubResource( 3 )
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
 
-[sub_resource type="Curve" id=5]
+[sub_resource type="Curve" id=4]
 max_value = 4.0
 _data = [ Vector2( 0, 0.372727 ), 0.0, 0.0, 0, 0, Vector2( 1, 1.75318 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=6]
-curve = SubResource( 5 )
+[sub_resource type="CurveTexture" id=5]
+curve = SubResource( 4 )
 
-[sub_resource type="ParticlesMaterial" id=1]
+[sub_resource type="ParticlesMaterial" id=6]
 flag_disable_z = true
 spread = 19.88
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 605.66
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-scale_curve = SubResource( 6 )
-color_ramp = SubResource( 4 )
+scale_curve = SubResource( 5 )
+color_ramp = SubResource( 3 )
 anim_offset = 1.0
 anim_offset_random = 1.0
 
@@ -56,13 +56,14 @@ polygon = PoolVector2Array( 5.35185, 6.96775, 90.281, 35.8337, 90.7816, -22.3987
 
 [node name="Particles2D" type="Particles2D" parent="Movables"]
 modulate = Color( 1.7, 1.4, 0, 1 )
-material = SubResource( 2 )
+material = SubResource( 1 )
 position = Vector2( 5.25594, 6.42392 )
+z_index = 1
 emitting = false
 amount = 300
 lifetime = 0.15
 local_coords = false
-process_material = SubResource( 1 )
+process_material = SubResource( 6 )
 texture = ExtResource( 4 )
 
 [node name="flamethrower-tip" type="Sprite" parent="Movables"]
